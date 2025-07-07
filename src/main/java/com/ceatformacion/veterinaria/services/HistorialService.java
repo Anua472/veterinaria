@@ -13,14 +13,14 @@ public class HistorialService {
     public HistorialService(HistorialRepository historialRepository) {
     }
 
-    public List<Historial> obtenerHistorialXmascota(int idMascota){
+    public List<Historial> obtenerHistorialPorMascota(Integer idMascota){
         return historialRepository.findByMascotaIdMascota(idMascota);
 
     }
-    public Historial guardarHistorial(Historial historial){
+    public Historial guardarEntrada(Historial historial){
         return historialRepository.save(historial);
     }
-    public void borrarHistorialXmascota(int idHistorial){
+    public void eliminarEntrada(Integer idHistorial){
         historialRepository.deleteById(idHistorial);
     }
 }
